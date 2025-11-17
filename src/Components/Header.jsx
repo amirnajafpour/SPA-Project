@@ -5,7 +5,7 @@ function Header() {
     <header className="bg-gray-100/50">
       <div className="container mx-auto flex h-16 items-center gap-8 px-4 sm:px-6 lg:px-8">
         <Link to="/" className="font-bold text-2xl text-indigo-600" href="#">
-          webprog.io
+          AmirSPA
         </Link>
 
         <div className="flex items-center justify-end md:justify-between">
@@ -38,12 +38,12 @@ function Header() {
               </li>
 
               <li>
-                <a
+                <NavLink
                   className="text-gray-500 transition hover:text-gray-500/75"
-                  href="#"
+                  to="/posts"
                 >
                   Posts
-                </a>
+                </NavLink>
               </li>
             </ul>
           </nav>
