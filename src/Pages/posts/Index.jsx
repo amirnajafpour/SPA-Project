@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Loading from "../../Components/Loading";
 import PostsList from "../../Components/posts/List";
+import { Link } from "react-router";
 
 function PostsIndex() {
   const [posts, setPosts] = useState(null);
@@ -29,9 +30,12 @@ function PostsIndex() {
   return (
     <div className="container mx-auto mt-15 px-4 sm:px-6 lg:px-8">
       <h1 className="font-bold text-xl mb-5">Posts:</h1>
-      <button className="mb-5 cursor-pointer rounded-sm border border-indigo-600 bg-indigo-600 px-6 py-2 text-sm font-medium text-white hover:bg-transparent hover:text-indigo-600 focus:ring-3 focus:outline-hidden">
+      <Link
+        to="/posts/create"
+        className="mb-5 inline-block cursor-pointer rounded-sm border border-indigo-600 bg-indigo-600 px-6 py-2 text-sm font-medium text-white hover:bg-transparent hover:text-indigo-600 focus:ring-3 focus:outline-hidden"
+      >
         Create Post
-      </button>
+      </Link>
 
       {error && <div className="text-rose-500">{error}</div>}
       {loading && <Loading />}

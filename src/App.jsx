@@ -5,6 +5,8 @@ import IndexUsers from "./Pages/users";
 import UserShow from "./Components/users/Show";
 import PostsIndex from "./Pages/posts/Index";
 import PostShow from "./Components/posts/show";
+import PostCreate from "./Pages/posts/Create";
+import { ToastContainer } from "react-toastify";
 
 function App() {
   return (
@@ -20,7 +22,9 @@ function App() {
 
           <Route path="/posts" element={<PostsIndex />} />
           <Route path="/posts/:postId" element={<PostShow />} />
+          <Route path="/posts/create" element={<PostCreate />} />
         </Routes>
+        <ToastContainer />
       </BrowserRouter>
     </>
   );
